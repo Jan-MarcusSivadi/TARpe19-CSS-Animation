@@ -1,0 +1,89 @@
+/*sets all (inline/block) elements to default*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Page body*/
+body {
+    background-color: black;
+    /*color - text color*/
+    color: white;
+    /*text-align - defines the position of the text inside*/
+    text-align: center;
+
+    font-family: 'Shadows Into Light', cursive;
+    /*font-family: 'Source Code Pro', monospace;*/
+    line-height: 1,6;
+}
+
+/*Text container parameters*/
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+/*Area height under the Title*/
+#carpeDiem {
+    height: 300px;
+}
+
+/*Title parameters*/
+#carpeDiem h1 {
+    font-size: 3.5rem;
+    line-height: 1.3;
+    position: relative;
+    animation-name: carpeDiem;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+/*Title animation*/
+@keyframes carpeDiem {
+    0% {top: -80px;}
+    100% {top: 200px;}
+}
+
+/*Text parameters*/
+#content {
+    font-size: 1.5rem;
+    position: relative;
+    animation-name: content;
+    animation-duration: 3s;
+}
+/*Text animation*/
+@keyframes content {
+    0% {left: -1500px}
+    100% {left: 0px;}
+}
+
+/*Button parameters*/
+.btn {
+    font-size: 1.2rem;
+
+    display: inline-block;
+    width: 10rem;
+    color: rgb(199, 18, 18);
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 0.5rem;
+    margin: 2em;
+    opacity: 0;
+    animation-name: btn;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+
+    transition-property: transform;
+    transition-duration: 2s;
+}
+/*Button animation*/
+@keyframes btn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/*Hovering over link button*/
+.btn:hover {
+    transform: rotateY(180deg);
+}
